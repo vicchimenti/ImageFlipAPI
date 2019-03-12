@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ImageWriter.Helper
+namespace ImageFlipAPI.ImageWriter.Helper
 {
     public class WriteHelper
     {

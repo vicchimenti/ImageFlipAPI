@@ -6,7 +6,7 @@ using ImageFlipAPI.ImageWriter.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ImageUploader.Handler
+namespace ImageFlipAPI.Handler
 {
     public interface IImageHandler
     {

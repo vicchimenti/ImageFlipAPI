@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="ImageWriter\Classes" />
       <Folder Include="wwwroot\images" />
     </ItemGroup>
 

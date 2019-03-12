@@ -14,11 +14,11 @@ namespace ImageFlipAPI.Controllers
         {
             _imageHandler = imageHandler;
         }
-        // GET
-        public IActionResult Index()
+        
+        // Upload an Image
+        public async Task<IActionResult> UploadImage(IFormFile file)
         {
-            return
-            View();
+            return await _imageHandler.UploadImage(file);
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using ImageFlipAPI.ImageWriter.Interface;
+using ImageFlipAPI.ImageWriter.Helper;
 using Microsoft.AspNetCore.Http;
 
 namespace ImageFlipAPI.ImageWriter.Classes

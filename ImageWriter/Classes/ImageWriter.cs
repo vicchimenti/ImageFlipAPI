@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 using ImageFlipAPI.ImageWriter.Interface;
 using ImageFlipAPI.ImageWriter.Helper;
@@ -25,7 +27,7 @@ namespace ImageFlipAPI.ImageWriter.Classes
             byte[] fileBytes;
             using (var ms = new MemoryStream())
             {
-                file.CopyTo(ms);
+                file?.CopyTo(ms);
                 fileBytes = ms.ToArray();
             }
 

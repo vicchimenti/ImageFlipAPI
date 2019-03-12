@@ -15,4 +15,12 @@
       <Folder Include="wwwroot\images" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="ImageWriter\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="ImageWriter\appsettings.json" />
+      <_ContentIncludedByDefault Remove="ImageWriter\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="ImageWriter\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="ImageWriter\Properties\launchSettings.json" />
+    </ItemGroup>
+
 </Project>

@@ -16,7 +16,6 @@ namespace ImageFlipAPI.ImageWriter.Classes
                 return await WriteFile(file);
             }
 
-            //TODO: Set up error handler
             return "Invalid image file";
         }
 

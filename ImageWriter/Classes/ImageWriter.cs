@@ -30,11 +30,11 @@ namespace ImageFlipAPI.ImageWriter.Classes
             {
                 file?.CopyTo(ms);
                 fileBytes = ms.ToArray();
-                // Convert byte[] to Base64 String
-                string base64String = Convert.ToBase64String(fileBytes);
             }
+            // Convert byte[] to Base64 String
+            //string base64String = Convert.ToBase64String(fileBytes);
 
-            return WriteHelper.GetImageFormat(base64String) != WriteHelper.ImageFormat.unknown;
+            return WriteHelper.GetImageFormat(fileBytes) != WriteHelper.ImageFormat.unknown;
         }
         
         // Write file to disk

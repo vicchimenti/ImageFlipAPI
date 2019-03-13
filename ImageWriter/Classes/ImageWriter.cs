@@ -27,7 +27,7 @@ namespace ImageFlipAPI.ImageWriter.Classes
             byte[] fileBytes;
             using (var ms = new MemoryStream())
             {
-                file?.CopyTo(ms);
+                file?.CopyToAsync(ms);
                 fileBytes = ms.ToArray();
             }
 
@@ -41,7 +41,7 @@ namespace ImageFlipAPI.ImageWriter.Classes
             try
             {
                 var extension = "." + file.FileName.Split('.')
-                                     [file.FileName.Split('.').Length - 1];
+                                     [file.FileName.Split('.').Length];
                 
                 filename = Guid.NewGuid().ToString() + extension;
                 

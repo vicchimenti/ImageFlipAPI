@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using ImageFlipAPI.ImageWriter.Interface;
 using ImageFlipAPI.ImageWriter.Helper;
 using Microsoft.AspNetCore.Http;
+using System.Drawing.Imaging;
 
 namespace ImageFlipAPI.ImageWriter.Classes
 {
     public class ImageWriter : IImageWriter
-    {
+    {   
         public async Task<string> UploadImage(IFormFile file)
         {
             if (CheckIfImageFile(file))
@@ -27,11 +28,13 @@ namespace ImageFlipAPI.ImageWriter.Classes
             byte[] fileBytes;
             using (var ms = new MemoryStream())
             {
-                file?.CopyToAsync(ms);
+                file?.CopyTo(ms);
                 fileBytes = ms.ToArray();
+                // Convert byte[] to Base64 String
+                string base64String = Convert.ToBase64String(fileBytes);
             }
 
-            return WriteHelper.GetImageFormat(fileBytes) != WriteHelper.ImageFormat.unknown;
+            return WriteHelper.GetImageFormat(base64String) != WriteHelper.ImageFormat.unknown;
         }
         
         // Write file to disk

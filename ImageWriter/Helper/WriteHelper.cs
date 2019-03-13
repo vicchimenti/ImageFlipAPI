@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Text;
 
@@ -25,6 +26,7 @@ namespace ImageFlipAPI.ImageWriter.Helper
             var tiff2 = new byte[] { 77, 77, 42 }; 
             var jpeg = new byte[] { 255, 216, 255, 224 }; 
             var jpeg2 = new byte[] { 255, 216, 255, 225 };
+            Console.Write("gif");
 
             if (bmp.SequenceEqual(bytes.Take(bmp.Length)))
             {
@@ -38,6 +40,7 @@ namespace ImageFlipAPI.ImageWriter.Helper
 
             if (png.SequenceEqual(bytes.Take(png.Length)))
             {
+                Console.Write("png");
                 return ImageFormat.png;
             }
 

@@ -25,5 +25,25 @@
       <_ContentIncludedByDefault Remove="ImageWriter\obj\project.packagespec.json" />
       <_ContentIncludedByDefault Remove="ImageWriter\Properties\launchSettings.json" />
     </ItemGroup>
+    
+
+    <ItemGroup>
+      <Compile Remove="ImageWriter\obj\**" />
+    </ItemGroup>
+    
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ImageWriter\obj\**" />
+    </ItemGroup>
+    
+
+    <ItemGroup>
+      <None Remove="ImageWriter\obj\**" />
+    </ItemGroup>
+    
+
+    <ItemGroup>
+      <Content Remove="ImageWriter\obj\**" />
+    </ItemGroup>
 
 </Project>
